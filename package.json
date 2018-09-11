@@ -1,0 +1,41 @@
+{
+  "name": "placefinder",
+  "version": "1.0.0",
+  "description": "Google map based application to find places",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "history": "^4.7.2",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "react-scripts": "1.1.5",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "redux-promise": "^0.6.0",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijaysharmase/PlaceFinder.git"
+  },
+  "keywords": [
+    "Google",
+    "Maps",
+    "Places"
+  ],
+  "author": "Vijay Sharma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijaysharmase/PlaceFinder/issues"
+  },
+  "homepage": "https://github.com/vijaysharmase/PlaceFinder#readme"
+}
