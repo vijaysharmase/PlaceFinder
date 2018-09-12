@@ -1,4 +1,4 @@
-import { browserHistory } from 'react-router';
+//import { browserHistory } from 'react-router';
 import Constants from '../../helpers/Constants';
 
 const RouteReducer = (state = {}, action) => {
@@ -12,7 +12,7 @@ const RouteReducer = (state = {}, action) => {
             //cases where the URL should have search param(s) and either they are incorrect format (using browser) or didn't provide within the URL (using browser/navigation)
             //replace the incorrect URL with corrected ones
             if (action.payload.wasEnteredURLInvalid !== undefined && action.payload.wasEnteredURLInvalid !== null && action.payload.wasEnteredURLInvalid) {
-                browserHistory.replace((pathname) + (search !== '' ? search : ''));
+                //browserHistory.replace((pathname) + (search !== '' ? search : ''));
                 return state;
             }
 

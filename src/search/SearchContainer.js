@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import HomeComponent from './HomeComponent';
+import SearchComponent from './SearchComponent';
 //import Utils from '../common/components/UtilsComponent';
 
 const mapStateToProps = (state, ownProps) => {
@@ -17,6 +17,6 @@ const mapDispatchToProps = (dispatch) => {
     return { dispatch }
 };
 
-const HomeContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(HomeComponent));
+const SearchContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchComponent));
 
-export default HomeContainer;
+export default SearchContainer;

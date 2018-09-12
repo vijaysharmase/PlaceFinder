@@ -2,6 +2,67 @@
 .icon-block {
   padding: 0 15px;
 }
+
 .icon-block .material-icons {
 	font-size: inherit;
+}
+
+.search-bar-container {
+  margin: 40px auto 0;
+}
+
+.search-input-container {
+  position: relative;
+}
+
+.clear-button,
+.clear-button:active,
+.clear-button:focus {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  color: #999;
+}
+
+.autocomplete-dropdown-container {
+  border-bottom: honeydew;
+  border-left: honeydew;
+  border-right: honeydew;
+  border-top: 1px solid #e6e6e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  border-radius: 0 0 2px 2px;
+}
+
+.suggestion-item {
+  padding: 8px;
+  text-align: left;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.suggestion-item.active {
+  background-color: #fafafa;
+}
+
+.suggestion-item strong{
+  font-weight: bold;
+}
+
+.spinner {
+  color: #222222;
+  font-size: 30px;
+}
+
+.error-message {
+  color: red;
+}
+
+.geocode-result-header {
+  font-size: 20px;
+  color: #222222;
 }

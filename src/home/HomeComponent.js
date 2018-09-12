@@ -1,4 +1,6 @@
 import React from 'react';
+import SearchContainer from '../search/SearchContainer';
+import PlacesContainer from '../places/PlacesContainer';
 import Constants from '../helpers/Constants';
 
 class HomeComponent extends React.Component {
@@ -8,48 +10,53 @@ class HomeComponent extends React.Component {
     }
 
     //#region React life cycle methods
+
     //#endregion
 
     render() {
         return (
             <div>
-                <div class="section no-pad-bot" id="index-banner">
-                    <div class="container">
+                <div className="section no-pad-bot" id="index-banner">
+                    <div className="container">
                         <br />
                         <br />
-                        <h1 class="header center orange-text">Starter Template</h1>
-                        <div class="row center">
-                            <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+                        <h1 className="header center orange-text">Place Finder App</h1>
+                        <div className="row center">
+                            <h5 className="header col s12 light">Place Finder is the best app for the users, it makes very easy to find HOTELS, ATMS, MEDICALS, RESTAURANTS and more.</h5>
+                            <h5 className="header col s12 light">It allows you to save, search and share your favorite places.</h5>
                         </div>
-                        <div class="row center">
-                            <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange">Get Started</a>
+                        <div className="row center">
+                            <SearchContainer />
+                        </div>
+                        <div className="row center">
+                            <PlacesContainer />
                         </div>
                         <br />
                         <br />
                     </div>
                 </div>
-                <div class="container">
-                    <div class="section">
-                        <div class="row">
-                            <div class="col s12 m4">
-                                <div class="icon-block">
-                                    <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
-                                    <h5 class="center">Speeds up development</h5>
-                                    <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+                <div className="container">
+                    <div className="section">
+                        <div className="row">
+                            <div className="col s12 m4">
+                                <div className="icon-block">
+                                    <h2 className="center light-blue-text"><i className="material-icons">account_balance</i></h2>
+                                    <h5 className="center">Find Banks</h5>
+                                    <p className="light">Find near by banks. Place Finder is the best app for the users, it makes very easy to find ATMS, MEDICALS, RESTAURANTS and more</p>
                                 </div>
                             </div>
-                            <div class="col s12 m4">
-                                <div class="icon-block">
-                                    <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
-                                    <h5 class="center">User Experience Focused</h5>
-                                    <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+                            <div className="col s12 m4">
+                                <div className="icon-block">
+                                    <h2 className="center light-blue-text"><i className="material-icons"><i className="material-icons">local_gas_station</i></i></h2>
+                                    <h5 className="center">Find Gas Station</h5>
+                                    <p className="light">Find near by filling stations. Place Finder is the best app for the users, it makes very easy to find ATMS, MEDICALS, RESTAURANTS and more</p>
                                 </div>
                             </div>
-                            <div class="col s12 m4">
-                                <div class="icon-block">
-                                    <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-                                    <h5 class="center">Easy to work with</h5>
-                                    <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+                            <div className="col s12 m4">
+                                <div className="icon-block">
+                                    <h2 className="center light-blue-text"><i className="material-icons">hotel</i></h2>
+                                    <h5 className="center">Find Hotels</h5>
+                                    <p className="light">Find near by hotels. Place Finder is the best app for the users, it makes very easy to find ATMS, MEDICALS, RESTAURANTS and more</p>
                                 </div>
                             </div>
                         </div>

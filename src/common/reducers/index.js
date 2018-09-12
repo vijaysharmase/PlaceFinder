@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux';
-import RouteReducer from './RouteReducer';
+import { routerReducer as routing } from 'react-router-redux';
+import SearchReducer from './SearchReducer';
 
 const reducerCollection = combineReducers({
-    routing: RouteReducer
+    routing: routing,
+    search: SearchReducer
 });
 
 export default reducerCollection;
