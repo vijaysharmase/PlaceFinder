@@ -4,10 +4,14 @@ class PlacesComponent extends Component {
     render() {
         return (
             <div>
-                <h4>Places Searched</h4>
-                <ul>
-                    {this.props.searchItems.map((item) => {
-                        return (<li key={item.place_id}>Address: {item.formatted_address}, Latitude: {item.latitude}, Longitude: {item.longitude}</li>);
+                {this.props.searchItems.length > 0 && (
+                    <h5 className="header center orange-text">Places Searched</h5>
+                )}
+                <ul style={{ textAlign: 'left' }}>
+                    {this.props.searchItems.map((item, index) => {
+                        return (
+                            <li key={index}><b>Address:</b> {item.formatted_address}, <b>Type:</b> {item.types[0].toString().toUpperCase()}, <b>Latitude:</b> {item.latitude}, <b>Longitude:</b> {item.longitude}<br /><hr /></li>
+                        );
                     })}
                 </ul>
             </div>

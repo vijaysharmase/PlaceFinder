@@ -12,8 +12,6 @@ class SearchComponent extends React.Component {
         this.state = {
             address: '',
             errorMessage: '',
-            latitude: null,
-            longitude: null,
             isGeocoding: false,
         };
     }
@@ -25,8 +23,6 @@ class SearchComponent extends React.Component {
     handleChange = address => {
         this.setState({
             address,
-            latitude: null,
-            longitude: null,
             errorMessage: ''
         });
     };
@@ -42,8 +38,6 @@ class SearchComponent extends React.Component {
                 getLatLng(res[0])
                     .then(({ lat, lng }) => {
                         this.setState({
-                            latitude: lat,
-                            longitude: lng,
                             isGeocoding: false,
                         }, () => {
                             this.props.dispatch(SearchActions.dispatchSearchSelected({...res[0], latitude: lat, longitude: lng}))
@@ -64,9 +58,7 @@ class SearchComponent extends React.Component {
 
     handleCloseClick = () => {
         this.setState({
-            address: '',
-            latitude: null,
-            longitude: null,
+            address: ''
         });
     };
 
@@ -81,8 +73,6 @@ class SearchComponent extends React.Component {
         const {
             address,
             errorMessage,
-            latitude,
-            longitude,
             isGeocoding,
         } = this.state;
 
@@ -137,24 +127,6 @@ class SearchComponent extends React.Component {
                             {errorMessage.length > 0 && (
                                 <div className="error-message">{errorMessage}</div>)
                             }
-                            {((latitude && longitude) || isGeocoding) && (
-                                <div>
-                                    <h3 className="geocode-result-header">Geocode result</h3>
-                                    {isGeocoding ? (<div><i className="fa fa-spinner fa-pulse fa-3x fa-fw spinner" /></div>) :
-                                        (
-                                            <div>
-                                                <div className="geocode-result-item--lat">
-                                                    <label>Latitude:</label>
-                                                    <span>{latitude}</span>
-                                                </div>
-                                                <div className="geocode-result-item--lng">
-                                                    <label>Longitude:</label>
-                                                    <span>{longitude}</span>
-                                                </div>
-                                            </div>
-                                        )}
-                                </div>
-                            )}
                         </div>
                     </div>
                 </div>
